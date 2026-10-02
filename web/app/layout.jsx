@@ -26,14 +26,16 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider>
           <SocketProvider>
             <ScreenShareProvider>
             <LanguageProvider>
-              <NavBar />
+              <div className="sticky top-0 z-90">
+                <NavBar />
+              </div>
               {children}
             </LanguageProvider>
             </ScreenShareProvider>
