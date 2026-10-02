@@ -47,7 +47,7 @@ export default function CodeEditor() {
 
   return (
     <div className="flex h-screen w-screen flex-col">
-      <div className="min-h-0 flex-1 [&_.monaco-editor]:cursor-default [&_.monaco-editor_.view-lines]:cursor-default [&_.monaco-editor_.view-line]:cursor-default">
+      <div className="min-h-0 flex-1">
         <Editor
           height="100%"
           width="100%"
