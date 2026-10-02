@@ -8,14 +8,7 @@ function showWindow() {
   if (!mainWindow || mainWindow.isDestroyed()) {
     createWindow();
   }
-  const cursor = screen.getCursorScreenPoint();
-  const area = screen.getDisplayNearestPoint(cursor).workArea;
-  mainWindow.setBounds({
-    x: Math.round(area.x + (area.width - 1400) / 2),
-    y: Math.round(area.y + (area.height - 900) / 2),
-    width: 1400,
-    height: 900,
-  });
+
   mainWindow.setAlwaysOnTop(true, "floating");
   mainWindow.show();
   mainWindow.moveTop();
